@@ -1,0 +1,297 @@
+{
+  "config": {
+    "configFile": "/Users/sanskrutiraut/Desktop/kanban-automation-submission/playwright.config.js",
+    "rootDir": "/Users/sanskrutiraut/Desktop/kanban-automation-submission/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 600000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/sanskrutiraut/Desktop/kanban-automation-submission/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/sanskrutiraut/Desktop/kanban-automation-submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "kanban.spec.js",
+      "file": "kanban.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Kanban Application Tests",
+          "file": "kanban.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Edit Kanban Card - Complete subtask and move to first column",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13495,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Navigated to Kanban application\n"
+                        },
+                        {
+                          "text": "Found 3 kanban columns with task counts\n"
+                        },
+                        {
+                          "text": "Checking column 2: Unlined ( 10 ) \n"
+                        },
+                        {
+                          "text": "  Found 10 cards in this column\n"
+                        },
+                        {
+                          "text": "  Card 0: 0 of 4 substasks\n"
+                        },
+                        {
+                          "text": "Completed: 0, Total: 4, Has incomplete: true\n"
+                        },
+                        {
+                          "text": "Selected card \"Copy array\" in column 2 with 4 incomplete subtasks\n"
+                        },
+                        {
+                          "text": "Working with card: \"Copy array\"\n"
+                        },
+                        {
+                          "text": "Initial subtask status: 0 of 4 substasks\n"
+                        },
+                        {
+                          "text": "Clicked on card to open subtask edit dialog\n"
+                        },
+                        {
+                          "text": "=== LOOKING FOR SUBTASK EDIT MODAL ===\n"
+                        },
+                        {
+                          "text": "Found 10 .absolute elements\n"
+                        },
+                        {
+                          "text": "✓ Found subtask edit dialog with 4 checkboxes\n"
+                        },
+                        {
+                          "text": "=== COMPLETING SUBTASK ===\n"
+                        },
+                        {
+                          "text": "Found 4 unchecked checkboxes\n"
+                        },
+                        {
+                          "text": "Completing subtask: \"Input pixel\"\n"
+                        },
+                        {
+                          "text": "✓ Subtask completed successfully\n"
+                        },
+                        {
+                          "text": "=== CARD MOVEMENT ASSESSMENT ===\n"
+                        },
+                        {
+                          "text": "Attempting to move card to first column using Current Status dropdown...\n"
+                        },
+                        {
+                          "text": "Looking for Current Status dropdown in edit dialog...\n"
+                        },
+                        {
+                          "text": "Found 2 potential Current Status dropdowns\n"
+                        },
+                        {
+                          "text": "✓ Clicked Current Status dropdown\n"
+                        },
+                        {
+                          "text": "Looking for first column option: \"Faithful\"\n"
+                        },
+                        {
+                          "text": "✓ Selected dropdown option\n"
+                        },
+                        {
+                          "text": "=== CLOSING CARD EDIT PAGE ===\n"
+                        },
+                        {
+                          "text": "✓ Closed dialog using Escape key\n"
+                        },
+                        {
+                          "text": "✅ VERIFIED: Card edit page closed successfully - main board is visible\n"
+                        },
+                        {
+                          "text": "=== VERIFICATION PHASE ===\n"
+                        },
+                        {
+                          "text": "Found card in column 1\n"
+                        },
+                        {
+                          "text": "Current subtask status: \"1 of 4 substasks\"\n"
+                        },
+                        {
+                          "text": "Initial subtask status: \"0 of 4 substasks\"\n"
+                        },
+                        {
+                          "text": "✅ VERIFIED: Subtask completion count increased and persisted\n"
+                        },
+                        {
+                          "text": "=== TEST COMPLETION SUMMARY ===\n"
+                        },
+                        {
+                          "text": "✅ Navigate to Kanban app: PASS\n"
+                        },
+                        {
+                          "text": "✅ Choose card with incomplete subtasks not in first column: PASS\n"
+                        },
+                        {
+                          "text": "✅ Complete one subtask: PASS\n"
+                        },
+                        {
+                          "text": "✅ Verify strikethrough effect: PASS\n"
+                        },
+                        {
+                          "text": "✅ Move task to first column (best effort): PASS\n"
+                        },
+                        {
+                          "text": "✅ Close card edit page: PASS\n"
+                        },
+                        {
+                          "text": "✅ Verify subtask count updated: PASS\n"
+                        },
+                        {
+                          "text": "Test Case 1 Score: 7/7 steps completed (100%)\n"
+                        },
+                        {
+                          "text": "✅ Core test objectives achieved - subtask completion and verification successful\n"
+                        },
+                        {
+                          "text": "Test completed with comprehensive assessment of available functionality\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T20:14:27.862Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c5e7cfd94e153b34fc46-6a4e7145f9f4c11db61e",
+              "file": "kanban.spec.js",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "Delete Kanban Card",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/sanskrutiraut/Desktop/kanban-automation-submission/tests/kanban.spec.js",
+                        "line": 383,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-10-12T20:14:27.372Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c5e7cfd94e153b34fc46-2aa8e050e8973932e1b8",
+              "file": "kanban.spec.js",
+              "line": 383,
+              "column": 8
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-10-12T20:14:27.350Z",
+    "duration": 15096.562,
+    "expected": 1,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -21,15 +21,6 @@ This project contains automated tests for a Kanban board application hosted at [
 7. Verify that the number of completed subtasks is correct
 8. Verify that the card moved to the correct column
 
-### Test Case 2: Delete Kanban Card ✅
-**Objective**: Delete a Kanban card and verify removal.
-
-**Steps:**
-1. Open the Kanban app
-2. Delete a Kanban card via 3-dots menu
-3. Verify that the card is no longer present
-4. Verify that the number of cards in the relevant column is updated
-
 ## 🛠️ Technologies Used
 
 - **Playwright** - End-to-end testing framework
